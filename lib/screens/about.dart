@@ -20,11 +20,11 @@ class About extends StatelessWidget {
           children: [
             Positioned(
               bottom:
-                  -120, // Adjust the top value to control how much of the container is visible
+                  -200, // Adjust the top value to control how much of the container is visible
               left: 0,
               right: 0,
               child: Container(
-                height: 600, // Even taller for a more elongated vertical oval
+                height: 700, // Even taller for a more elongated vertical oval
                 width: 500, // Narrower width
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 196, 215, 205),
@@ -71,8 +71,75 @@ class About extends StatelessWidget {
                     ),
                   ),
                   Expanded(
+                    flex: 1,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.7,
+                      child: Column(
+                        children: [
+                          Text(
+                            'FocusBoost is your personal productivity companion, designed to help you improve concentration, manage tasks efficiently, and achieve your goals. Whether you’re working on a project, studying, or simply need to stay focused, FocusBoost combines effective time management techniques with motivational support. ',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 14,
+                  ),
+                  Expanded(
                     flex: 2,
-                    child: Text('test'),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Key Features:Task Management: ',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Organize and prioritize your to-do list, with built-in time tracking to monitor progress. ',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Motivational Quotes: Get inspired with daily quotes that keep you motivated and focused throughout the day.',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Concentration Tips: Practical advice and tips to help you stay focused and block out distractions.',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   SizedBox(
                     width: double.infinity,
